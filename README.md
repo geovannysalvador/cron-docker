@@ -1,0 +1,1 @@
+Finalidad del proyecto es crear imagenes y subirlas a dockerhub
