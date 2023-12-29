@@ -12,8 +12,14 @@ COPY package.json ./
 # Instalar las dependencias de ser necesarias
 RUN npm install
 
-# el destino seria el /app
-COPY app.js ./
+# # el destino seria el /app
+# COPY app.js ./
+
+# copiar el task y el test
+COPY . .
+
+# Comando para es testing o test
+RUN npm run test
 
 # Para correr necesitamos el comando
 CMD [ "node", "app.js" ]
