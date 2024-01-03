@@ -21,6 +21,12 @@ COPY . .
 # Comando para es testing o test
 RUN npm run test
 
+# Eliminar archivos y directorios no necesarios en img/produccion
+RUN rm -rf test && rm -rf node_modules
+
+# Intalar unicamente las dev de produccion 
+RUN npm install --prod
+
 # Para correr necesitamos el comando
 CMD [ "node", "app.js" ]
 
