@@ -1,5 +1,7 @@
 
-FROM node:19.2-alpine3.17
+# FROM --platform=linux/amd64 node:19.2-alpine3.17
+# FROM node:19.2-alpine3.17
+FROM --platform=$BUILDPLATFORM node:19.2-alpine3.17
 
 # cd al app. aplicacion de destino
 WORKDIR /app
